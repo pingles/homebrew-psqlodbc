@@ -2,9 +2,9 @@
 
 ## Install the libraries
 
-    $ brew tap pingles/homebrew
+    $ brew tap pingles/homebrew-psqlodbc
     $ brew install libiodbc
-    $ brew install psqlodbc --with-idobc
+    $ brew install psqlodbc --with-iodbc
 
 ## Configure ODBC
 
@@ -18,7 +18,7 @@ In all situations I've had to connect using [ODBC's SQLDriverConnect](http://msd
 Pkg.add("ODBC")
 using ODBC
 
-ODBC.advancedconnect("Driver=/usr/local/lib/psqlodbcw.so;Database=data;Username=user;Password=pass;Server=foo.redshift.amazonaws.com;Port=5439;", driver_prompt=ODBC.SQL_DRIVER_NOPROMPT)
+ODBC.advancedconnect("Driver=/usr/local/lib/psqlodbcw.so;Database=data;Username=user;Password=pass;Server=foo.redshift.amazonaws.com;Port=5439;")
 ODBC.query("SELECT * FROM information_schema.tables")
 ```
 
